@@ -1,0 +1,15 @@
+<h2>New York Landmarks</h2>
+<a class="btn" href="landmarks/new">New Landmark</a>
+<a class="btn" href="/figures">View Figures</a>
+<header>
+  <h4>Name</h4>
+  <h4>Year Completed</h4>
+</header>
+<main>
+  <% @landmarks.each do |landmark| %>
+    <div class="landmark">
+      <a href="/landmarks/<%= landmark.id %>"><%= landmark.name %></a>
+      <p><%= landmark.year_completed %></p>
+    </div>
+  <% end %>
+</main>
